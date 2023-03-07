@@ -14,19 +14,20 @@
 <body>
 <h2>전체 멤버</h2>
 
-
-<table>
-    <tr>
-        <th>id</th>
-        <th>이름</th>
-    </tr>
-    <c:forEach var="to" items="${memberList}">
+    <table>
         <tr>
-            <td>${to.id}</td>
-            <td>${to.name}</td>
+            <th>ID</th>
+            <th>이름</th>
+            <th>이메일</th>
         </tr>
-    </c:forEach>
-</table>
-
+        <c:forEach var="to" items="${memberList}">
+            <tr>
+                <td><a href="/mypage?id=${to.id}"> ${to.id} </a></td>
+                <td>${to.name}</td>
+                <td>${to.email}</td>
+                <td><a href="/delete?id=${to.id}"> 삭제하기 </a></td>
+            </tr>
+        </c:forEach>
+    </table>
 </body>
 </html>
