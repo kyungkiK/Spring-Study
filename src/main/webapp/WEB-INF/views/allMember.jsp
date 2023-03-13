@@ -14,7 +14,7 @@
 <body>
 <h2>전체 멤버</h2>
 
-    <table>
+    <table border="1">
         <tr>
             <th>ID</th>
             <th>이름</th>

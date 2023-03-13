@@ -40,4 +40,5 @@ public class MemberController {
         model.addAttribute("flag", memberService.deleteMember(to));
         return "/member/deleteAction";
     }
+
 }

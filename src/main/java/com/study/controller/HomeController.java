@@ -19,8 +19,8 @@ public class HomeController {
     private final HomeService homeService;
 
     @GetMapping("/")
-    @ResponseBody
     public String helloView(){
+
         return "hello";
     }
 

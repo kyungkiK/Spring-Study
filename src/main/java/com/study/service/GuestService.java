@@ -23,4 +23,9 @@ public class GuestService {
 
         return flag;
     }
+
+    public MemberTO loginMember(MemberTO to){
+        MemberTO member = guestMapper.checkMember(to);
+        return member;
+    }
 }
