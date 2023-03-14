@@ -11,7 +11,10 @@ public class GuestService {
 
     private final GuestMapper guestMapper;
 
-    public int joinMember(MemberTO to){
+    public int joinMember(MemberTO to) {
+
+        // 회원가입시 자동으로 일반 유저 권한 부여
+        to.setRole("ROLE_USER");
 
         int result = guestMapper.save(to);
         int flag = 1;
@@ -24,7 +27,7 @@ public class GuestService {
         return flag;
     }
 
-    public MemberTO loginMember(MemberTO to){
+    public MemberTO loginMember(MemberTO to) {
         MemberTO member = guestMapper.checkMember(to);
         return member;
     }

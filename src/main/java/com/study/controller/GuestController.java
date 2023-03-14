@@ -44,6 +44,7 @@ public class GuestController {
             session.setAttribute("memberInfo", member);
             session.setAttribute("memberName", member.getName());
             session.setAttribute("memberEmail", member.getEmail());
+            session.setAttribute("memberRole", member.getRole());
         }
 
         model.addAttribute("member", member);
